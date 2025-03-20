@@ -1,7 +1,10 @@
 import React from 'react'
+import Profile from './components/Profile/Profile'
 
 export default function App() {
   return (
-    <div className='bg-black text-amber-50'>Hello Word</div>
+    <div>
+      <Profile/>
+    </div>
   )
 }
