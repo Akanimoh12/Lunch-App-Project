@@ -3,7 +3,7 @@ import Createaccount from './components/Create-Account/createaccount'
 
 export default function App() {
   return (
-    <div className='bg-black text-amber-50'>
+    <div className=''>
     
     <Createaccount />
     </div>
