@@ -3,10 +3,10 @@ import Activity from './Activity'
 
 export default function Profile() {
     return (
-        <div className='w-full h-[100vh] justify-center content-center bg-black '>
+        <div className='w-full h-[100vh] sm:justify-center sm:content-center sm:bg-black '>
 
             {/* CONTAINER */}
-            <div className='sm:w-[390px] w-full sm:m-auto m-0 bg-white rounded-2xl p-[24px] '>
+            <div className='sm:w-[390px] w-full sm:m-auto m-0 bg-white rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
                 
                 {/* Profile Section*/}
                 <div className='grid grid-cols-4'>
@@ -80,7 +80,7 @@ export default function Profile() {
                 <div className=''>
 
                     {/*  */}
-                    <div className='flex justify-between text-[#87748C] my-[24px] text-[16px] font-semibold  '>
+                    <div className='flex justify-between text-[#87748C] mt-[24px] text-[16px] font-semibold  '>
                         <p>Activities</p>
                         <p className='hover:cursor-pointer '>View All</p>
                     </div>
@@ -88,7 +88,7 @@ export default function Profile() {
                     {/* Content of Activity */}
                     <div className=''>
                         <Activity/>
-                        
+
                     </div>
 
                 </div>

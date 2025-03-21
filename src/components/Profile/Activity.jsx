@@ -3,16 +3,15 @@ import React from 'react'
 export default function Activity() {
     const data = [
         { name: 'Jenny Wilson', itemNo: 2, date: 'May 18, 2023', itemType: 'Free Lunch', time: '11:25 AM' },
-        { name: 'Akanimoh J.', itemNo: 5, date: 'May 20, 2024', itemType: 'Free Lunch', time: '12:25 PM' },
-        { name: 'Manoah Luka', itemNo: 11, date: 'May 21, 2025', itemType: 'Free Lunch', time: '02:25 PM' },
-        
+        { name: 'Akanimoh J.', itemNo: 1, date: 'May 20, 2024', itemType: 'Free Lunch', time: '12:25 PM' },
+        { name: 'Manoah Luka', itemNo: 6, date: 'May 21, 2025', itemType: 'Free Lunch', time: '02:25 PM' },
     ];
 
     return (
-        <div>
+        <div className=''>
 
             {data.map((item, index) => (
-                <div className='grid grid-cols-4 border-b-[0.5px] border-[#87748C] pb-3 ' key={index}>
+                <div className='grid grid-cols-4 border-b-[0.5px] border-[#87748C] pb-3 mt-3 ' key={index}>
 
                     {/* Details of Lunch */}
                     <div className='col-span-3'>
