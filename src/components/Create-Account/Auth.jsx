@@ -21,10 +21,10 @@ export default function Auth() {
         <div className='w-full h-[100vh] sm:justify-center sm:content-center bg-[#7C149B] '>
 
             {/* CONTAINER */}
-            <div className='sm:w-[390px] w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
+            <div className='sm:w-[390px] bg-[url(/dotted.svg)] sm:h-auto h-full w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
 
                 {/* Logo */}
-                <div className='w-full  justify-items-center mt-20'>
+                <div className='w-full  justify-items-center mt-24'>
                     <img src="/logo.svg" className='w-[74px] h-[74px] ' />
                 </div>
 
@@ -34,7 +34,7 @@ export default function Auth() {
                 </div>
 
                 {/* Buttons for Create Account And Login */}
-                <div className='mt-12'>
+                <div className='mt-16'>
 
                     {/* Create Account Button */}
                     <button className='bg-white text-[#7C149B] w-full h-[56px] rounded-[10px] text-[16px] font-semibold ' onClick={clickDisplay}>Create Account</button>
