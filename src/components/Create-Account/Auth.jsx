@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import React from 'react'
+import Home02 from '../Home/Home02';
 
 
 export default function Auth() {
@@ -66,8 +67,7 @@ export default function Auth() {
                 </div>
 
             </div>
-            {/* END FOR CONTAINER */}
-           
+            {/* END FOR CONTAINER */}           
             
 
         </div>
