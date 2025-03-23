@@ -1,7 +1,14 @@
 import React from 'react'
+import Homee from './components/Home/Homee'
+
+import Lunch from './components/Lunch/Lunch'
 
 export default function App() {
   return (
-    <div className='bg-black text-amber-50'>Hello Word</div>
+    <div>
+<Homee />
+<Lunch />
+    </div>
+  
   )
 }
