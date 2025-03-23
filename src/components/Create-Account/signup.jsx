@@ -35,7 +35,7 @@ function SignIn() {
 
   return (
     <div className='w-full h-[100vh] sm:justify-center sm:content-center '>
-      <div className='sm:w-[390px] bg-[url(/dotted.svg)] sm:h-auto h-full w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2]'>
+      <div className='sm:w-[390px] sm:h-auto h-full w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2]'>
         <p className='text-[#710193] text-2xl font-sans w-[178px] h-[30px] mt-[49px] flex gap-[8px]'>Sign In</p>
 
         <div className='flex flex-col gap-2 mt-[50px]'>
@@ -67,7 +67,7 @@ function SignIn() {
         </div>
 
         <div>
-          <div className=' content-center text-center w-full h-[56px] mt-[404px]  rounded-[10px]  bg-[#7C149B]'>
+          <div className=' content-center text-center w-full h-[56px] mt-[200px]  rounded-[10px]  bg-[#7C149B]'>
             <button className='text-center  text-[#FFFCFD]' onClick={handleSubmit}>Create Account</button>
           </div>
 
