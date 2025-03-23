@@ -67,10 +67,7 @@ export default function Auth() {
                 </div>
 
             </div>
-            {/* END FOR CONTAINER */}
-
-            <Home02/>
-           
+            {/* END FOR CONTAINER */}           
             
 
         </div>
