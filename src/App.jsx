@@ -19,6 +19,8 @@ export default function App() {
     <div>
 
       <Routes>
+      <Route path="/" element={<Staff />} />
+      <Route path="/otp" element={<Otp />} />
         <Route path="/" element={<Auth/>}></Route>
         <Route path="/organization" element={<Staff/>}></Route>
         <Route path="/staff" element={<Staff/>}></Route>
