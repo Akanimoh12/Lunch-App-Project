@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import React from 'react'
 
 import Staff from './components/Create-Account/Staff'
@@ -16,21 +16,21 @@ import Lunch from './components/Lunch/Lunch'
 export default function App() {
   return (
     <BrowserRouter>
-    <div>
+      <div>
 
-      <Routes>
-      <Route path="/" element={<Staff />} />
-      <Route path="/otp" element={<Otp />} />
-        <Route path="/" element={<Auth/>}></Route>
-        <Route path="/organization" element={<Staff/>}></Route>
-        <Route path="/staff" element={<Staff/>}></Route>
-        <Route path="/signin" element={<Signup/>}></Route>
-        <Route path="/createaccount" element={<Createaccount/>}></Route>
-        <Route path="/otp" element={<Otp/>}></Route>
-        <Route path="/home" element={<Homee/>}></Route>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Auth />}></Route>
+          <Route path="/organization" element={<Staff />}></Route>
+          <Route path="/staff" element={<Staff />}></Route>
+          <Route path="/signin" element={<Signup />}></Route>
+          <Route path="/createaccount" element={<Createaccount />}></Route>
+          <Route path="/otp" element={<Otp />}></Route>
+          <Route path="/home" element={<Homee />}></Route>
+          <Route path="/staff" element={<Staff />} />
+          <Route path="/otp" element={<Otp />} />
+        </Routes>
 
-    </div>    
+      </div>
     </BrowserRouter>
 
 
