@@ -1,8 +1,25 @@
 import React from "react";
+import { useState } from "react";
 
 import { UserGroupIcon, CogIcon, HomeIcon, UserIcon } from "@heroicons/react/24/outline";
+import Home02 from "./Home02";
 
+    
 const Homee = () => {
+  const [display, setDisplay] = useState('hidden');
+    const [displayed, setDisplayed] = useState(false);
+
+    const clickDisplay = () => {
+        if (displayed === false) {
+            setDisplayed(true)
+            setDisplay('block')
+        } else {
+            setDisplayed(false)
+            setDisplay('hidden')
+
+        }
+    }
+
   return (
     <div className="flex justify-center items-center h-screen bg-[#FFFCFD] font-sans">
       <div className="bg-[#FFFCFD] w-full max-w-[390px] h-[100vh] max-h-[844px] rounded-lg sm:shadow-lg p-4 flex flex-col justify-between overflow-hidden">
@@ -11,7 +28,7 @@ const Homee = () => {
           <img
             src="/images/Image (1).png"
             alt="Profile"
-            className="w-[32px] h-[32px] rounded-full"
+            className="w-[32px] h-[32px] rounded-full" 
           />
           <div>
             <h2 className="text-[15px] text-[#710193]">Hi, Rebecca!</h2>
@@ -37,7 +54,7 @@ const Homee = () => {
 
         {/* Buttons */}
         <div className="flex gap-4">
-          <button className="flex-1 bg-[#7C149B]  text-white px-3 py-2 rounded-[10px] h-[56px] w-[163px]">
+          <button onClick={clickDisplay} className="flex-1 bg-[#7C149B]  text-white px-3 py-2 rounded-[10px] h-[56px] w-[163px]">
             Redeem Lunch
           </button>
           <button className="flex-1 bg-[#EABA00]  text-white p-[3px] rounded-[10px] h-[56px] w-[163px]">
@@ -87,6 +104,10 @@ const Homee = () => {
       </button>
     </footer>
       </div>
+      < div className={`bg-white sm:w-[390px] bottom-0 absolute w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] ${display}  `} >
+      <Home02 />
+
+        </div >
     </div>
   );
 };

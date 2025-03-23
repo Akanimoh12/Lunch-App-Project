@@ -1,26 +1,26 @@
-import { useState } from 'react';
+
 import React from 'react'
 
 export default function Home02() {
 
-    const [display, setDisplay] = useState('hidden');
-    const [displayed, setDisplayed] = useState(false);
+    // const [display, setDisplay] = useState('hidden');
+    // const [displayed, setDisplayed] = useState(false);
 
-    const clickDisplay = () => {
-        if (displayed === false) {
-            setDisplayed(true)
-            setDisplay('block')
-        } else {
-            setDisplayed(false)
-            setDisplay('hidden')
+    // // const clickDisplay = () => {
+    // //     if (displayed === false) {
+    // //         setDisplayed(true)
+    // //         setDisplay('block')
+    // //     } else {
+    // //         setDisplayed(false)
+    // //         setDisplay('hidden')
 
-        }
-    }
+    // //     }
+    // // }
 
 
     return (
 
-        < div className={`sm:w-[390px] absolute w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] ${display}  `} >
+        < div  >
 
             {/* <div className='w-full h-[100vh] sm:justify-center sm:content-center sm:bg-black flex flex-col justify-end '>
 
