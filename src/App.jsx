@@ -21,12 +21,13 @@ export default function App() {
 
     <div className=''> <Otp/>
     
-    <Notification />
-    
-
-      <Profile/>
-      <Auth/>
-      <Home02/>
+      <Notification />
+      <Createaccount />
+      <Givefreelunch />
+      <Signup />
+      <Profile />
+      <Auth />
+      <Home02 />
       <Homee />
       <Lunch />
     
