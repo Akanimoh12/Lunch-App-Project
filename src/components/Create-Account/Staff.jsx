@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
 const Staff = () => {
@@ -10,7 +11,7 @@ const Staff = () => {
   return (
 <div className="min-h-screen bg-white flex flex-col mx-auto px-4">
     <div className="w-[382px] mx-auto mt-[59px] ml-[23px] mb-8 px-4">
-            <h1 className="text-[#710193] font-[600] font-open-sans font-semibold text-24px leading-[30px]"> Create Account</h1>
+            <h1 className="text-[#710193] font-open-sans font-semibold text-24px leading-[30px]"> Create Account</h1>
     </div>
 
       {/* Form Container */}
@@ -98,8 +99,9 @@ const Staff = () => {
         </div>
 
         {/* Next Button */}
-        <button type="submit"className="w-full h-[56px] rounded-[10px] bg-[#710193] text-white font-semibold hover:bg-[#5a007a] transition-colors">
-            Next</button>
+        <Link to='/otp' className='w-full bg-[#710193] text-center content-center text-white h-[56px] rounded-[10px] text-[16px] font-semibold '>
+                                    Next
+                                </Link>
 
         {/* Login Link */}
         <p className="text-center text-[#87748C]">

@@ -4,7 +4,7 @@ function createaccount() {
   return (
     <div>
         <div className='justify-center text-center h-[100vh] top-59px'>
-            <p className='text-[#710193] text-2xl w-3xs font-sans w-[178px] h-[30px] mt-[49px] ml-[24px] flex gap-[8px]'>Create Account</p>
+            <p className='text-[#710193] text-2xl font-sans w-[178px] h-[30px] mt-[49px] ml-[24px] flex gap-[8px]'>Create Account</p>
 
           
           {/* input field for organization and lunch price */}

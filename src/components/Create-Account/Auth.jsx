@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import React from 'react'
 
@@ -37,17 +38,29 @@ export default function Auth() {
                 <div className='mt-16'>
 
                     {/* Create Account Button */}
-                    <button className='bg-white text-[#7C149B] w-full h-[56px] rounded-[10px] text-[16px] font-semibold ' onClick={clickDisplay}>Create Account</button>
+                    <button className='bg-white text-[#7C149B] hover:cursor-pointer w-full h-[56px] rounded-[10px] text-[16px] font-semibold ' onClick={clickDisplay}>Create Account</button>
 
                     {/* Types of Account to create */}
                     <div className={`grid grid-cols-2 gap-3 mt-2 ${display}  transition-opacity duration-300 ${displayed ? 'opacity-100' : 'opacity-15'
                         } `}>
-                        <button className='bg-[#EABA00] text-white h-[56px] rounded-[10px] text-[16px] font-semibold '>Organization</button>
-                        <button className=' bg-[#EABA00] text-white w-full h-[56px] rounded-[10px] text-[16px] font-semibold '>Staff</button>
+
+                        {/* Organization Button */}
+                        <Link to='/organization' className='w-full bg-[#EABA00] text-center content-center text-white h-[56px] rounded-[10px] text-[16px] font-semibold '>
+                            Organization
+                        </Link>
+
+                        {/* Staff Button */}
+                        <Link to='/staff' className='w-full bg-[#EABA00] text-center content-center text-white h-[56px] rounded-[10px] text-[16px] font-semibold '>
+                            Staff
+                        </Link>
+
                     </div>
 
                     {/* Sign In Account Button */}
-                    <button className='bg-white text-[#7C149B] w-full h-[56px] rounded-[10px] text-[16px] font-semibold mt-6 '>Sign In</button>
+                    <Link to='/signin' >
+                        <button className='bg-white text-[#7C149B] w-full hover:cursor-pointer h-[56px] rounded-[10px] text-[16px] font-semibold mt-6'>Sign In</button>
+                    </Link>
+                    
 
                 </div>
 
