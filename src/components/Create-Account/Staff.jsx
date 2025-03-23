@@ -1,117 +1,203 @@
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Staff = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    phone: "+234",
+    password: "",
+    confirmPassword: "",
+  });
+  const [errors, setErrors] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const validateForm = () => {
+    let formErrors = {};
+    let isValid = true;
+
+    if (!formData.email) {
+      formErrors.email = "Email is required.";
+      isValid = false;
+    }
+
+    if (!formData.firstName) {
+      formErrors.firstName = "First name is required.";
+      isValid = false;
+    }
+
+    if (!formData.lastName) {
+      formErrors.lastName = "Last name is required.";
+      isValid = false;
+    }
+
+    if (!formData.phone || formData.phone.length < 10) {
+      formErrors.phone = "Please enter a valid phone number.";
+      isValid = false;
+    }
+
+    if (!formData.password) {
+      formErrors.password = "Password is required.";
+      isValid = false;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      formErrors.confirmPassword = "Passwords do not match.";
+      isValid = false;
+    }
+
+    setErrors(formErrors);
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      navigate("/otp");
+    }
   };
 
   return (
-<div className="min-h-screen bg-white flex flex-col mx-auto px-4">
-    <div className="w-[382px] mx-auto mt-[59px] ml-[23px] mb-8 px-4">
-            <h1 className="text-[#710193] font-open-sans font-semibold text-24px leading-[30px]"> Create Account</h1>
-    </div>
+    <div className="flex justify-center items-center min-h-screen bg-[#FFFCFD]">
+      <div className="bg-white p-6 rounded-lg w-[350px]">
+        <h2 className="text-center text-[#710193] text-xl mr-4 font-semibold mb-4">Create Account</h2>
 
-      {/* Form Container */}
-      <div className="w-[87%] md:max-w-[500px] lg:max-w-[600px] mx-auto flex flex-col gap-6 mb-2.5">
-        <div className="h-[77px]">
-          <label className="text-[#87748C] text-sm">Email</label>
-          <input type="email" className="w-full h-full p-3 rounded-sm border border-[#87748C] focus:outline-none mb-2 focus:border-[#710193]"/>
-        </div>
+        <form onSubmit={handleSubmit}>
+          {/* Email Input */}
+          <label className="text-sm text-[#87748c]">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full border rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+          />
+          {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
 
-        {/* First Name and Last Name Fields */}
-        <div className="h-[77px] flex gap-4 mb-2">
-          <div className="w-1/2">
-            <label className="text-[#87748C] text-sm">First Name</label>
-            <input
-              type="text"
-              className="w-full h-full p-3 rounded-sm border border-[#87748C] focus:outline-none focus:border-[#710193]"
-            />
+          {/* Name Inputs */}
+          <div className="flex gap-3">
+            <div className="w-1/2">
+              <label className="text-sm text-[#87748c]">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                className="w-full border rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+              />
+              {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
+            </div>
+            <div className="w-1/2">
+              <label className="text-sm text-[#87748c]">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                className="w-full border rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+              />
+              {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
+            </div>
           </div>
-          <div className="w-1/2">
-            <label className="text-[#87748C] text-sm">Last Name</label>
-            <input
-              type="text"
-              className="w-full h-full p-3 rounded-lg border border-[#87748C] focus:outline-none focus:border-[#710193]"
-            />
-          </div>
-        </div>
 
-        {/* Phone Number */}
-        <div className="h-[77px] mb-2">
-          <label className="text-[#87748C] text-sm">Phone Number</label>
+          {/* Phone Number Input */}
+          <label className="text-sm text-[#87748c]">Phone Number</label>
           <input
             type="tel"
-            placeholder="+234"
-            className="w-full h-full p-3 rounded-lg border border-[#87748C] focus:outline-none focus:border-[#710193]"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full border rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
           />
-        </div>
+          {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
 
-        {/* Password Field */}
-      <div className="h-[77px] relative mb-2">
-         <label className="text-[#87748C] text-sm">Password</label>
+          {/* Password Input */}
+          <label className="text-sm text-[#87748c]">Password</label>
+          <div className="relative mb-3">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              className="w-full border rounded-md p-2 pr-10 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+            />
+            <button
+              type="button"
+              className="absolute right-3 top-3 cursor-pointer"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-[#87748C] hover:text-[#710193] transition-colors"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"
+                />
+              </svg>
+            </button>
+          </div>
+          {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
 
-  {/* Password Input Field */}
-  <input
-    type={showPassword ? "text" : "password"}
-    className="w-full h-full p-3 rounded-lg border border-[#87748C] focus:outline-none focus:border-[#710193]"
-  />
-
-  {/* Toggle Password Visibility Button */}
-  <button
-    type="button"
-    onClick={togglePasswordVisibility}
-    className="absolute inset-y-4 right-2 pr-3 flex items-center justify-center h-full"
-    aria-label={showPassword ? "Hide password" : "Show password"}
-  >
-    {/* Eye Icon */}
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-5  text-[#87748C] hover:text-[#710193] transition-colors"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"
-      />
-    </svg>
-  </button>
-</div>
-   {/* Confirm Password Field */}
-        <div className="h-[77px] py-2 mb-5">
-          <label className="text-[#87748C]">Confirm Password</label>
+          {/* Confirm Password Input */}
+          <label className="text-sm text-[#87748C]">Confirm Password</label>
           <input
             type="password"
-            className="w-full h-full p-3 rounded-lg border border-[#87748C] focus:outline-none focus:border-[#710193]"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            className="w-full border rounded-md p-2 mb-5 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
           />
-        </div>
+          {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
 
-        {/* Next Button */}
-        <Link to='/otp' className='w-full bg-[#710193] text-center content-center text-white h-[56px] rounded-[10px] text-[16px] font-semibold '>
-                                    Next
-                                </Link>
+          {/* Next Button */}
+          <button
+            type="submit"
+            className="w-full bg-purple-700 text-white p-3 rounded-md hover:bg-purple-800 transition"
+          >
+            Next
+          </button>
+        </form>
 
-        {/* Login Link */}
-        <p className="text-center text-[#87748C]">
-          Already have an account? {" "}
-          <a href="#" className="text-[#c7cb09] hover:underline">
-            Login
-          </a> 
+        {/* Sign In Link */}
+        <p className="text-center  text-[#87748C] text-sm mt-3">
+          Already have an account?{" "}
+          <a href="#" className="text-purple-700 font-medium">
+            Sign in.
+          </a>
         </p>
+      </div>
     </div>
-</div>
   );
 };
 
