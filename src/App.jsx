@@ -1,14 +1,22 @@
 import React from 'react'
-import Homee from './components/Home/Homee'
 
+import Profile from './components/Profile/Profile'
+import Auth from './components/Create-Account/Auth'
+import Home02 from './components/Home/Home02'
+import Homee from './components/Home/Homee'
 import Lunch from './components/Lunch/Lunch'
 
 export default function App() {
   return (
     <div>
-<Homee />
-<Lunch />
+
+      <Profile/>
+      <Auth/>
+      <Home02/>
+      <Homee />
+      <Lunch />
+    
     </div>
-  
+
   )
 }
