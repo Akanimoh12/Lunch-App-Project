@@ -89,7 +89,7 @@ const Staff = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full border rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
           />
           {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
 
@@ -102,7 +102,7 @@ const Staff = () => {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full border rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+                className="w-full rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
               />
               {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
             </div>
@@ -113,7 +113,7 @@ const Staff = () => {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full border rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+                className="w-full rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
               />
               {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
             </div>
@@ -126,7 +126,7 @@ const Staff = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full border rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
           />
           {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
 
@@ -138,7 +138,7 @@ const Staff = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full border rounded-md p-2 pr-10 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full rounded-md p-2 pr-10 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
             />
             <button
               type="button"
@@ -176,7 +176,7 @@ const Staff = () => {
             name="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
-            className="w-full border rounded-md p-2 mb-5 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full rounded-md p-2 mb-5 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
           />
           {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
 
