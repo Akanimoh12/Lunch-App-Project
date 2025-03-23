@@ -29,7 +29,7 @@ function SignIn() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      navigate('/dashboard'); // Navigate to the required page
+      navigate('/home'); // Navigate to the required page
     }
   };
 
@@ -68,7 +68,7 @@ function SignIn() {
 
         <div>
           <div className=' content-center text-center w-full h-[56px] mt-[200px]  rounded-[10px]  bg-[#7C149B]'>
-            <button className='text-center  text-[#FFFCFD]' onClick={handleSubmit}>Create Account</button>
+            <button className='text-center  text-[#FFFCFD]' onClick={handleSubmit}>Sign In</button>
           </div>
 
           <div className='flex gap-1 text-sm ml-[80px] mt-[10px] h-[15px]'>
