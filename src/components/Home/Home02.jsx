@@ -50,7 +50,7 @@ export default function Home02() {
 
             {/* Redeem Button Section */}
             <div>
-                <button className='bg-[#7C149B] text-white w-full h-[56px] rounded-[10px] text-[16px] font-semibold mt-16 hover:cursor-pointer '>Redeem Lunch</button>
+                <button className='bg-[#7C149B] mb-5 text-white w-full h-[56px] rounded-[10px] text-[16px] font-semibold mt-16 hover:cursor-pointer '>Redeem Lunch</button>
             </div>
 
         </div >
