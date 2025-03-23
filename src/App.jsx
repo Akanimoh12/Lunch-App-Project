@@ -1,4 +1,10 @@
 import React from 'react'
+
+import Staff from './components/Create-Account/Staff'
+import Otp from './components/Create-Account/Otp'
+
+
+    
 import Createaccount from './components/Create-Account/createaccount'
 import Signup from './components/Create-Account/signup'
 import Givefreelunch from './components/Lunch/givefreelunch'
@@ -13,7 +19,7 @@ import Lunch from './components/Lunch/Lunch'
 export default function App() {
   return (
 
-    <div className=''>
+    <div className=''> <Otp/>
     
     <Notification />
     
@@ -24,7 +30,6 @@ export default function App() {
       <Homee />
       <Lunch />
     
-    </div>
 
   )
 }
