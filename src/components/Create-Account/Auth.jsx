@@ -31,7 +31,7 @@ export default function Auth() {
             <div className='sm:w-[390px] bg-[url(/dotted.svg)] sm:h-auto h-full w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
 
                 {/* Logo */}
-                <div className='w-full flex justify-items-center mt-24'>
+                <div className='w-full flex justify-center mt-24'>
                     <img src="/logo.svg" className='w-[74px] h-[74px] ' />
                 </div>
 
