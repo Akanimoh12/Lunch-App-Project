@@ -24,19 +24,19 @@ const Homee = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-[#FFFCFD] font-sans">
       <div className="bg-[#FFFCFD] w-full max-w-[390px] h-[100vh] max-h-[844px] rounded-lg sm:shadow-lg p-4 flex flex-col justify-between overflow-hidden">
-        
+
         {/* Profile Section */}
         <div className="flex items-center gap-2 mb-5">
 
           <Link to='/profile'>
-          <img
-            src="/images/Image (1).png"
-            alt="Profile"
-            className="w-[32px] h-[32px] rounded-full"
-          />
+            <img
+              src="/images/Image (1).png"
+              alt="Profile"
+              className="w-[32px] h-[32px] rounded-full"
+            />
           </Link>
 
-          
+
 
           <div>
             <h2 className="text-[15px] text-[#710193]">Hi, Rebecca!</h2>
@@ -45,9 +45,9 @@ const Homee = () => {
 
           <div className="flex ml-[170px] ">
             <Link to='/notification'>
-            <img src="/images/Bell.png" alt="" className="w-[24px] h-[24px]" />
+              <img src="/images/Bell.png" alt="" className="w-[24px] h-[24px]" />
             </Link>
-            
+
             <img src="/images/Subtract.png" alt="" className="w-[19px] h-[19px]" />
           </div>
         </div>
@@ -102,36 +102,36 @@ const Homee = () => {
         {/* Footer Navigation */}
         <footer className="flex justify-around pt-2 ">
           <Link to='/home'>
-          <button className="flex flex-col items-center text-[#7C149B]">
-            <HomeIcon className="h-6 w-6" /> {/* Home icon */}
-            <span className="text-xs">Home</span>
-          </button>
+            <button className="flex flex-col items-center text-[#7C149B]">
+              <HomeIcon className="h-6 w-6" /> {/* Home icon */}
+              <span className="text-xs">Home</span>
+            </button>
           </Link>
-          
+
 
           <Link to=''>
-          <button className="flex flex-col items-center text-gray-500">
-            <UserGroupIcon className="h-6 w-6" /> {/* Employees icon */}
-            <span className="text-xs">Employees</span>
-          </button>
+            <button className="flex flex-col items-center text-gray-500">
+              <UserGroupIcon className="h-6 w-6" /> {/* Employees icon */}
+              <span className="text-xs">Employees</span>
+            </button>
           </Link>
 
-          
+
 
           <Link to='/profile'>
-          <button className="flex flex-col items-center text-gray-500">
-            <UserIcon className="h-6 w-6" /> {/* Profile icon */}
-            <span className="text-xs">Profile</span>
-          </button>
+            <button className="flex flex-col items-center text-gray-500">
+              <UserIcon className="h-6 w-6" /> {/* Profile icon */}
+              <span className="text-xs">Profile</span>
+            </button>
           </Link>
 
-    
+
         </footer>
 
       </div>
 
       <div>
-        
+
       </div>
 
       <div className={`bg-white sm:w-[390px] h-[530px] shadow-gray border-t-[0.5px] shadow bottom-0 absolute w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] ${display}  `} >

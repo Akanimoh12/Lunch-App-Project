@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function RedeemLunch() {
   const navigate = useNavigate();
-  
+
   // State only for fields that need to be changed
   const [bankName, setBankName] = useState("");
   const accountNumber = "0198945933"; // Static value, no need for state
@@ -22,42 +22,70 @@ export default function RedeemLunch() {
 
   return (
     <div className="min-h-screen bg-white p-4 flex flex-col items-center relative">
+
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-white bg-opacity-50"></div>
+      <div className="absolute inset-0 h-full bg-gray-200 bg-opacity-50"></div>
 
       {/* Profile Section */}
-      <div className="relative h-[220px] w-full max-w-sm bg-gray-200 bg-opacity-10 p-6 text-center z-10">
-        <div className="flex items-center space-x-4">
-          <img
-            src="/images/Frame 80.png" 
-            alt="Profile"
-            className="w-[62.52px] h-[62.52px] rounded-full  border-pink-200 border-4"
-          />
-          <div>
-            <h3 className="text-[15px] font-semibold text-[#710193]">Rebecca Adeyoju</h3>
-            <p className="text-[#AD99B2] text-[10px]">Lab Analyst.</p>
+      <div className="relative w-full max-w-sm  bg-opacity-10 p-6 z-10">
+
+        {/* Profile Section*/}
+        <div className='grid grid-cols-4'>
+
+          {/* Profile details and image */}
+          <div className='col-span-3 justify-between '>
+
+            <img src="/RebPics.svg" className='w-[78px] h-[78px] ' />
+
+            <div className='mt-[8px]'>
+              <h1 className='text-[#710193] text-[15px] font-extrabold'>Rebecca Adeyoju</h1>
+              <p className='text-[#AD99B2] text-[10px]  '>Lab Analyst.</p>
+            </div>
+
           </div>
-          <button className="ml-auto text-white w-[31px] h-[19.5px]">⚙</button>
+
+          {/* Settings Icon */}
+          <div className='justify-center w-full justify-items-end '>
+            <img src="/Vector.svg" className='w-[24px] h-[24px] hover:cursor-pointer  ' />
+          </div>
+
         </div>
-        <div className="flex space-x-3 tracking-tighter mt-4">
-          <div className="w-[115px] h-[68px]">
-            <h4 className="text-[14px] font-semibold text-[#87748C]">87</h4>
-            <p className="text-[14px] font-semibold text-[#87748C]">Total free lunches received</p>
+        {/* End for Profile Section */}
+
+        {/* User Profile Review  */}
+        <div className='flex gap-6'>
+
+          {/* Total lunches received */}
+          <div className='mt-[19px]'>
+            <h1 className='font-extrabold text-[18px] '>87</h1>
+            <p className='text-[14px] text-[#AD99B2] font-medium '>
+              Total free <br />
+              lunches received
+            </p>
           </div>
-          <div className="w-[115px] h-[68px]">
-            <h4 className="text-[14px] font-semibold text-[#87748C]">34</h4>
-            <p className="text-[14px] font-semibold text-[#87748C]">Total free lunches given</p>
+
+          {/* Total lunches given */}
+          <div className='mt-[19px]'>
+            <h1 className='font-extrabold text-[18px] '>34</h1>
+            <p className='text-[14px] text-[#AD99B2] font-medium '>
+              Total free <br />
+              lunches given
+            </p>
           </div>
+
+
         </div>
+        {/* End for User Profile Review */}
+
       </div>
 
       {/* Redeem Lunch Modal */}
-      <div className="relative w-full max-w-[390px] h-[543px] bg-[#FFFCFD] shadow-lg rounded-lg p-6  z-20">
+      <div className="absolute bottom-10 w-full max-w-[390px] h-[543px] bg-[#FFFCFD] shadow-lg rounded-lg p-6  z-20">
         <button
           onClick={() => navigate("/home")}
           className="absolute top-4 right-4 text-[#87748C] h-[18px] w-[18px]"
         >
-          ✖
+          <img src="cancel.svg" alt="" />
         </button>
 
         <h2 className="text-[24px] font-semibold text-[#710193]">Redeem Lunch</h2>

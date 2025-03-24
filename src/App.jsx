@@ -33,6 +33,7 @@ export default function App() {
           <Route path="/otp" element={<Otp />} />
           <Route path="/notification" element={<Notification />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/redeemlunch" element={<RedeemLunch />} />
           
           
         </Routes>

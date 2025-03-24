@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import React from 'react'
 
 export default function Home02() {
@@ -50,7 +50,9 @@ export default function Home02() {
 
             {/* Redeem Button Section */}
             <div>
-                <button className='bg-[#7C149B] mb-5 text-white w-full h-[56px] rounded-[10px] text-[16px] font-semibold mt-16 hover:cursor-pointer '>Redeem Lunch</button>
+                <Link to='/redeemlunch'>
+                    <button className='bg-[#7C149B] mb-5 text-white w-full h-[56px] rounded-[10px] text-[16px] font-semibold mt-16 hover:cursor-pointer '>Redeem Lunch</button>
+                </Link>
             </div>
 
         </div >

@@ -67,7 +67,6 @@ export default function Auth() {
                         <button className='bg-white text-[#7C149B] w-full hover:cursor-pointer h-[56px] rounded-[10px] text-[16px] font-semibold mt-6'>Sign In</button>
                     </Link>
                     
-
                 </div>
 
             </div>
