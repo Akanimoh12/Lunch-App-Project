@@ -1,4 +1,4 @@
-export default function LunchRedeemed() {
+export default function LunchSuccess() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-white p-4">
       {/* Card with Background Image */}

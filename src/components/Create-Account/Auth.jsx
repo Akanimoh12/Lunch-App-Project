@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import React from 'react'
 import Home02 from '../Home/Home02';
-import LunchRedeemed from '../Lunch/lunchsuccess';
+import LunchRedeemed from '../Lunch/LunchSuccess';
 import Lunch from '../Lunch/Lunch';
+import RedeemLunch from '../Lunch/RedeemLunch';
+import LunchSuccess from '../Lunch/LunchSuccess';
 
 
 export default function Auth() {
@@ -69,7 +71,9 @@ export default function Auth() {
                 </div>
 
             </div>
-            {/* END FOR CONTAINER */}    
+            {/* END FOR CONTAINER */}   
+
+            
 
 
         </div>
