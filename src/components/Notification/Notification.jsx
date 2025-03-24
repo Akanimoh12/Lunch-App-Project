@@ -3,12 +3,12 @@ import React from 'react';
 
 export default function Notification() {
   return (
-    <div className='w-full h-[100vh] flex sm:justify-center sm:content-center'>
+    <div className='w-full h-[100vh] flex sm:justify-center sm:content-center sm:bg-[#710193] '>
 
-    <div className="w-full sm:w-[390px] h-[100vh] sm:h-auto p-[24px]  ">
+    <div className="w-full sm:w-[390px] h-[100vh] sm:h-auto p-[24px] bg-white sm:rounded-2xl ">
 
       {/* Header */}
-      <div className="flex mt-5 ml-6 gap-2 items-center">
+      <div className="flex gap-2 items-center">
 
         <Link to='/home'>
         <svg width="24" height="29" viewBox="0 0 24 24" fill="none">
@@ -25,8 +25,9 @@ export default function Notification() {
       </div>
 
       {/* Recent Notifications */}
-      <p className="mt-5 ml-7 text-[#87748C]">Recent</p>
-      <div className="w-[344px] h-[318px] rounded-[10px] border border-[#F4C6FF] bg-[#F0E8F2] p-4 ml-6 mt-5">
+      <p className="mt-5 text-[#87748C]">Recent</p>
+
+      <div className="w-full h-[318px] rounded-[10px] border border-[#F4C6FF] bg-[#F0E8F2] p-4 mt-5">
         <p className="text-[#FFA500]">You just received a free lunch!</p>
 
         <div className="mt-4 flex items-center gap-4">
@@ -50,10 +51,10 @@ export default function Notification() {
       </div>
 
       {/* Last Week Notifications */}
-      <p className="mt-5 ml-7 text-[#87748C]">Last Week</p>
+      <p className="mt-5 text-[#87748C]">Last Week</p>
 
       {[...Array(2)].map((_, i) => (
-        <div key={i} className="w-[342px] h-[181px] rounded-[10px] border border-[#F4C6FF] bg-[#F0E8F2] p-4 ml-6 mt-4">
+        <div key={i} className="w-full h-[181px] rounded-[10px] border border-[#F4C6FF] bg-[#F0E8F2] p-4 mt-4">
           <div className="flex items-center gap-4">
             <img className="rounded-[15px]" src="Frame 73.jpg" alt="" width="50" height="50" />
             <div>

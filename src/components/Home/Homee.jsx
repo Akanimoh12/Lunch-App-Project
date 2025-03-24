@@ -22,8 +22,9 @@ const Homee = () => {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-[#FFFCFD] font-sans">
-      <div className="bg-[#FFFCFD] w-full max-w-[390px] h-[100vh] max-h-[844px] rounded-lg sm:shadow-lg p-4 flex flex-col justify-between overflow-hidden">
+    <div className="flex justify-center items-center h-screen bg-[#710193] font-sans">
+
+      <div className="bg-[#FFFCFD] w-full max-w-[390px] h-[100vh] max-h-[844px] sm:rounded-2xl sm:shadow-lg p-4 flex flex-col justify-between overflow-hidden">
 
         {/* Profile Section */}
         <div className="flex items-center gap-2 mb-5">

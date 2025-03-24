@@ -78,7 +78,7 @@ const Staff = () => {
 
   return (
 
-    <div className="flex justify-center items-center min-h-screen bg-[#FFFCFD]">
+    <div className="flex justify-center items-center min-h-screen bg-[#710193]">
 
       <div className="bg-white p-6 rounded-lg w-[350px]">
 

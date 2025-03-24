@@ -5,10 +5,10 @@ import Activity from './Activity'
 
 export default function Profile() {
     return (
-        <div className='w-full h-[100vh] sm:justify-center sm:content-center sm:bg-black '>
+        <div className='w-full h-[100vh] sm:justify-center sm:content-center bg-[#710193] '>
 
             {/* CONTAINER */}
-            <div className='sm:w-[390px] w-full h-[100vh] sm:h-auto sm:m-auto m-0 bg-white rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
+            <div className='sm:w-[390px] w-full h-[100vh] sm:h-auto sm:m-auto m-0 bg-white sm:rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
 
                 {/* Profile Section*/}
                 <div className='grid grid-cols-4'>
@@ -59,7 +59,7 @@ export default function Profile() {
                 {/* End for User Profile Review */}
 
                 {/* Lunch Available */}
-                <div className='bg-[#F0E8F2] rounded-[8px] p-[24px] mt-[24px] '>
+                <div className='bg-[#F0E8F2] rounded-[8px] px-[18px] py-[12px] mt-[24px] '>
 
                     <div className='flex gap-2'>
 
@@ -98,7 +98,7 @@ export default function Profile() {
 
 
                 {/* Footer Navigation */}
-                <footer className="flex justify-around pt-2 my-4 text-gray-500 ">
+                <footer className="flex justify-around pt-2 text-gray-500 ">
                     <Link to='/home'>
                         <button className="flex flex-col items-center ">
                             <HomeIcon className="h-6 w-6" /> {/* Home icon */}

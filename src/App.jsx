@@ -21,7 +21,7 @@ export default function App() {
   return (
 
     <BrowserRouter>
-      <div>
+      <div> 
 
         <Routes>
           <Route path="/" element={<Auth />}></Route>

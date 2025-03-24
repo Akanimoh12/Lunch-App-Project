@@ -7,10 +7,10 @@ export default function Successfull() {
     return (
 
 
-        <div className='w-full h-[100vh] sm:justify-center sm:content-center  '>
+        <div className='w-full h-[100vh] sm:justify-center sm:content-center sm:bg-[#710193]  '>
 
             {/* CONTAINER */}
-            <div className='sm:w-[390px] w-full h-[100vh] sm:h-auto sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
+            <div className='sm:w-[390px] w-full h-[100vh] sm:h-auto sm:m-auto m-0 sm:rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] bg-white '>
 
                 <div className=''>
                     {/* Profile Section*/}
@@ -102,7 +102,7 @@ export default function Successfull() {
 
 
 
-                <div className=" absolute  bottom-10 sm:bottom-20 w-[90%] p-4 sm:w-auto m-auto justify-center flex bg-white">
+                <div className=" absolute  bottom-10 sm:bottom-8 w-[90%] p-4 sm:w-auto m-auto justify-center flex bg-white">
 
                     {/* Card with Background Image */}
                     <div

@@ -34,8 +34,8 @@ function SignIn() {
   };
 
   return (
-    <div className='w-full h-[100vh] sm:justify-center sm:content-center '>
-      <div className='sm:w-[390px] sm:h-auto h-full w-full sm:m-auto m-0 rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2]'>
+    <div className='w-full h-[100vh] sm:justify-center sm:content-center bg-[#710193] '>
+      <div className='sm:w-[390px] sm:h-auto h-full w-full sm:m-auto m-0 sm:rounded-2xl p-[24px] bg-white sm:border-[1px] sm:border-[#F0E8F2]'>
         <p className='text-[#710193] text-[24px] font-semibold font-sans w-[178px] h-[30px] mt-[49px] flex gap-[8px]'>Sign In</p>
 
         <div className=' gap-2 mt-[50px]'>
