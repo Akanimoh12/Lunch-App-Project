@@ -77,68 +77,71 @@ const Staff = () => {
   };
 
   return (
+
     <div className="flex justify-center items-center min-h-screen bg-[#FFFCFD]">
+
       <div className="bg-white p-6 rounded-lg w-[350px]">
-        <h2 className="text-center text-[#710193] text-xl mr-4 font-semibold mb-4">Create Account</h2>
+
+        <h2 className=" text-[#710193] text-[24px] font-semibold mb-10">Create Account</h2>
 
         <form onSubmit={handleSubmit}>
           {/* Email Input */}
-          <label className="text-sm text-[#87748c]">Email</label>
+          <label className="text-[14px] text-[#87748c]">Email</label>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full h-[56px] rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
           />
           {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
 
           {/* Name Inputs */}
           <div className="flex gap-3">
             <div className="w-1/2">
-              <label className="text-sm text-[#87748c]">First Name</label>
+              <label className="text-[14px] text-[#87748c]">First Name</label>
               <input
                 type="text"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+                className="w-full h-[56px] rounded-[10px] p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
               />
               {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
             </div>
             <div className="w-1/2">
-              <label className="text-sm text-[#87748c]">Last Name</label>
+              <label className="text-[14px] text-[#87748c]">Last Name</label>
               <input
                 type="text"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+                className="w-full h-[56px] rounded-[10px] p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
               />
               {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
             </div>
           </div>
 
           {/* Phone Number Input */}
-          <label className="text-sm text-[#87748c]">Phone Number</label>
+          <label className="text-[14px] text-[#87748c]">Phone Number</label>
           <input
             type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full rounded-md p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full h-[56px] rounded-[10px] p-2 mb-3 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
           />
           {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
 
           {/* Password Input */}
-          <label className="text-sm text-[#87748c]">Password</label>
+          <label className="text-[14px] text-[#87748c]">Password</label>
           <div className="relative mb-3">
             <input
               type={showPassword ? "text" : "password"}
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full rounded-md p-2 pr-10 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full h-[56px] rounded-[10px] p-2 pr-10 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
             />
             <button
               type="button"
@@ -170,20 +173,20 @@ const Staff = () => {
           {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
 
           {/* Confirm Password Input */}
-          <label className="text-sm text-[#87748C]">Confirm Password</label>
+          <label className="text-[14px] text-[#87748C]">Confirm Password</label>
           <input
             type="password"
             name="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
-            className="w-full rounded-md p-2 mb-5 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full h-[56px] rounded-[10px] p-2 mb-5 border-[0.5px] border-[#87748C] outline-none focus:ring-2 focus:ring-purple-400"
           />
           {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
 
           {/* Next Button */}
           <button
             type="submit"
-            className="w-full bg-purple-700 text-white p-3 rounded-md hover:bg-purple-800 transition"
+            className="w-full h-[56px] mt-12 font-semibold text-[14px] rounded-[10px] bg-purple-700 text-white p-3 hover:bg-purple-800 transition"
           >
             Next
           </button>
@@ -196,6 +199,7 @@ const Staff = () => {
             Sign in.
           </a>
         </p>
+
       </div>
     </div>
   );

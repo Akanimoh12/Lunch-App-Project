@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { UserGroupIcon, CogIcon, HomeIcon, UserIcon } from "@heroicons/react/24/outline";
 import Activity from './Activity'
 
 export default function Profile() {
@@ -6,11 +8,11 @@ export default function Profile() {
         <div className='w-full h-[100vh] sm:justify-center sm:content-center sm:bg-black '>
 
             {/* CONTAINER */}
-            <div className='sm:w-[390px] w-full sm:m-auto m-0 bg-white rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
-                
+            <div className='sm:w-[390px] w-full h-[100vh] sm:h-auto sm:m-auto m-0 bg-white rounded-2xl p-[24px] sm:border-[1px] sm:border-[#F0E8F2] '>
+
                 {/* Profile Section*/}
                 <div className='grid grid-cols-4'>
-                    
+
                     {/* Profile details and image */}
                     <div className='col-span-3 justify-between '>
 
@@ -22,7 +24,7 @@ export default function Profile() {
                         </div>
 
                     </div>
-                    
+
                     {/* Settings Icon */}
                     <div className='justify-center w-full justify-items-end '>
                         <img src="/Vector.svg" className='w-[24px] h-[24px] hover:cursor-pointer  ' />
@@ -51,7 +53,7 @@ export default function Profile() {
                             lunches given
                         </p>
                     </div>
-                    
+
 
                 </div>
                 {/* End for User Profile Review */}
@@ -65,14 +67,14 @@ export default function Profile() {
 
                         <p className='text-[14px] font-medium'>
                             Lunch <br />
-                            Available 
+                            Available
                         </p>
                     </div>
 
                     <h1 className='text-[32px] font-bold text-[#8524A1] mt-[8px] '>12</h1>
 
                 </div>
-                
+
                 {/* Redeem Button */}
                 <button className='bg-[#7C149B] font-semibold text-[16px] text-white rounded-[10px] w-[159px] h-[56px] mt-6 hover:cursor-pointer '>Redeem</button>
 
@@ -87,12 +89,42 @@ export default function Profile() {
 
                     {/* Content of Activity */}
                     <div className=''>
-                        <Activity/>
+                        <Activity />
 
                     </div>
 
                 </div>
                 {/* End for Activities Section */}
+
+
+                {/* Footer Navigation */}
+                <footer className="flex justify-around pt-2 my-4 text-gray-500 ">
+                    <Link to='/home'>
+                        <button className="flex flex-col items-center ">
+                            <HomeIcon className="h-6 w-6" /> {/* Home icon */}
+                            <span className="text-xs">Home</span>
+                        </button>
+                    </Link>
+
+
+                    <Link to=''>
+                        <button className="flex flex-col items-center ">
+                            <UserGroupIcon className="h-6 w-6" /> {/* Employees icon */}
+                            <span className="text-xs">Employees</span>
+                        </button>
+                    </Link>
+
+
+
+                    <Link to='/profile'>
+                        <button className="flex flex-col items-center text-[#7C149B]">
+                            <UserIcon className="h-6 w-6" /> {/* Profile icon */}
+                            <span className="text-xs">Profile</span>
+                        </button>
+                    </Link>
+
+
+                </footer>
 
 
 

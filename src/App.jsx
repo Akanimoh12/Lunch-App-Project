@@ -18,26 +18,27 @@ import LunchRedeemed from "./components/Lunch/lunchsuccess"
 
 export default function App() {
   return (
-<div>
-<LunchRedeemed />
-</div>
-    // <BrowserRouter>
-    //   <div>
 
-    //     <Routes>
-    //       <Route path="/" element={<Auth />}></Route>
-    //       <Route path="/organization" element={<Staff />}></Route>
-    //       <Route path="/staff" element={<Staff />}></Route>
-    //       <Route path="/signin" element={<Signup />}></Route>
-    //       <Route path="/createaccount" element={<Createaccount />}></Route>
-    //       <Route path="/otp" element={<Otp />}></Route>
-    //       <Route path="/home" element={<Homee />}></Route>
-    //       <Route path="/staff" element={<Staff />} />
-    //       <Route path="/otp" element={<Otp />} />
-    //     </Routes>
+    <BrowserRouter>
+      <div>
 
-    //   </div>
-    // </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Auth />}></Route>
+          <Route path="/organization" element={<Staff />}></Route>
+          <Route path="/signin" element={<Signup />}></Route>
+          <Route path="/createaccount" element={<Createaccount />}></Route>
+          <Route path="/otp" element={<Otp />}></Route>
+          <Route path="/home" element={<Homee />}></Route>
+          <Route path="/staff" element={<Staff />} />
+          <Route path="/otp" element={<Otp />} />
+          <Route path="/notification" element={<Notification />} />
+          <Route path="/profile" element={<Profile />} />
+          
+          
+        </Routes>
+
+      </div>
+    </BrowserRouter>
 
 
 

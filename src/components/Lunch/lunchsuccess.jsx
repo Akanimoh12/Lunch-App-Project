@@ -1,15 +1,15 @@
 export default function LunchRedeemed() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-orange-100 p-4">
+    <div className="flex justify-center items-center min-h-screen bg-white p-4">
       {/* Card with Background Image */}
       <div
         className="w-full max-w-[390px] h-[555px] shadow-lg rounded-lg p-6 text-center relative"
         style={{
-          backgroundImage: "url('/images/background.jpeg')", // Use uploaded image
+          backgroundImage: "url('/bg.svg')", // Use uploaded image
           backgroundSize: "cover",
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
-          backgroundColor: "#FED7AA", // Fallback background
+          backgroundColor: "white", // Fallback background
         }}
       >
         {/* Icon Section (Replaces Large Checkmark Icon) */}

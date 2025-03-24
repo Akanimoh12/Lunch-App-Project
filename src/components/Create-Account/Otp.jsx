@@ -6,19 +6,19 @@ const Otp = () => {
       <div className="flex flex-col flex-grow items-start px-4">
         <div className="w-full text-left mb-8 mt-16 md:mt-20">
           <h1 className="text-2xl md:text-3xl font-bold text-[#710193]">OTP</h1>
-          <p className="mt-2 text-sm text-[#87748C] mb-10">
+          <p className="mt-2 text-[14px] text-[#87748C] mb-10">
             A 6 digit OTP code has been sent to your organization, kindly enter the code.
           </p>
         </div>
 
         <div className="flex justify-center w-full">
-          <div className='flex justify-center space-x-2 w-full'>
+          <div className='grid grid-cols-6  rounded-[10px] justify-center space-x-2 w-full'>
             {Array.from({ length: 6 }).map((_, index) => (
               <input
                 key={index}
                 type="text"
                 maxLength="1"
-                className="w-[38.67px] h-[56px] border border-gray-300 rounded text-center text-xl focus:outline-none focus:border-[#710193]"
+                className="w-[43.66666793823242px] shadow h-[56px] border border-gray-300 rounded text-center text-xl focus:outline-none focus:border-[#710193]"
               />
             ))}
           </div>
@@ -36,7 +36,7 @@ const Otp = () => {
 
         <p className="mt-4 text-center text-sm text-[#87748C]">
           Already have an account?{' '}
-          <a href="/signin" className="text-[#c7cb09] font-semibold">
+          <a href="/signin" className="text-[#FFA500] font-semibold">
             Sign In
           </a>
         </p>
