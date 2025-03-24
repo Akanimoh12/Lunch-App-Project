@@ -17,14 +17,14 @@ export default function RedeemLunch() {
       return;
     }
 
-    navigate("/confirmation"); // Navigate to confirmation page
+    navigate("/success"); // Navigate to confirmation page
   };
 
   return (
-    <div className="min-h-screen bg-white p-4 flex flex-col items-center relative">
+    <div className="min-h-screen bg-black p-4 flex flex-col items-center relative  ">
 
       {/* Background Overlay */}
-      <div className="absolute inset-0 h-full bg-gray-200 bg-opacity-50"></div>
+      <div className="absolute inset-0 h-auto bg-opacity-50 bg-white"></div>
 
       {/* Profile Section */}
       <div className="relative w-full max-w-sm  bg-opacity-10 p-6 z-10">
@@ -38,7 +38,7 @@ export default function RedeemLunch() {
             <img src="/RebPics.svg" className='w-[78px] h-[78px] ' />
 
             <div className='mt-[8px]'>
-              <h1 className='text-[#710193] text-[15px] font-extrabold'>Rebecca Adeyoju</h1>
+              <h1 className='text-[#710193] text-[15px] font-extrabold'>Rebecca Adeyoju</h1> 
               <p className='text-[#AD99B2] text-[10px]  '>Lab Analyst.</p>
             </div>
 
@@ -80,7 +80,7 @@ export default function RedeemLunch() {
       </div>
 
       {/* Redeem Lunch Modal */}
-      <div className="absolute bottom-10 w-full max-w-[390px] h-[543px] bg-[#FFFCFD] shadow-lg rounded-lg p-6  z-20">
+      <div className="absolute bottom-2 w-full max-w-[390px] h-[543px] bg-[#FFFCFD] rounded-lg p-6  z-20">
         <button
           onClick={() => navigate("/home")}
           className="absolute top-4 right-4 text-[#87748C] h-[18px] w-[18px]"
@@ -129,6 +129,7 @@ export default function RedeemLunch() {
             Withdraw
           </button>
         </form>
+
       </div>
     </div>
   );

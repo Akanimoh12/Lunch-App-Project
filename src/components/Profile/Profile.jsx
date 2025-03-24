@@ -63,7 +63,7 @@ export default function Profile() {
 
                     <div className='flex gap-2'>
 
-                        <img src="Plate.svg" alt="" className='w-[40px] h-[40px]' />
+                        <img src="Plate.svg" alt="" className='w-[40px] h-[40px]' /> 
 
                         <p className='text-[14px] font-medium'>
                             Lunch <br />
@@ -113,7 +113,6 @@ export default function Profile() {
                             <span className="text-xs">Employees</span>
                         </button>
                     </Link>
-
 
 
                     <Link to='/profile'>

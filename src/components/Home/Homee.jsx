@@ -43,9 +43,10 @@ const Homee = () => {
             <p className="text-[10px] text-[#AD99B2]">Lab Analyst</p>
           </div>
 
-          <div className="flex ml-[170px] ">
+          <div className="flex ml-[170px] items-center ">
+
             <Link to='/notification'>
-              <img src="/images/Bell.png" alt="" className="w-[24px] h-[24px]" />
+              <img src="/images/Bell.svg" alt="" className="w-[24px] h-[24px]" />
             </Link>
 
             <img src="/images/Subtract.png" alt="" className="w-[19px] h-[19px]" />

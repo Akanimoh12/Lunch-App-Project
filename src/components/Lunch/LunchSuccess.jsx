@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function LunchSuccess() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-white p-4">
@@ -24,9 +26,12 @@ export default function LunchSuccess() {
         <p className="text-[#FFA500] font-bold text-[14px] mt-1">(₦4,400)</p>
 
         {/* Button */}
-        <button className="w-[342px] h-[56px] mt-6 bg-gray-100 text-[#710193] py-2 px-4 rounded-[10px] border border-purple-500">
+        <Link to='/home'>
+        <button className="w-[342px] hover:cursor-pointer h-[56px] mt-6 bg-gray-100 text-[#710193] py-2 px-4 rounded-[10px] border border-purple-500">
           Go to home page
         </button>
+        </Link>
+        
       </div>
     </div>
   );

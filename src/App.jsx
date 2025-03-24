@@ -15,6 +15,7 @@ import Home02 from './components/Home/Home02'
 import Homee from './components/Home/Homee'
 import Lunch from './components/Lunch/Lunch'
 import LunchRedeemed from "./components/Lunch/LunchSuccess"
+import Successfull from "./components/Lunch/Successfull"
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/notification" element={<Notification />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/redeemlunch" element={<RedeemLunch />} />
+          <Route path="/success" element={<Successfull />} />
           
           
         </Routes>

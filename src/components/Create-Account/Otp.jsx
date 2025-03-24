@@ -29,7 +29,7 @@ const Otp = () => {
         <button
           className="w-full h-[56px] bg-[#710193] text-center text-white rounded-[10px] text-[16px] font-semibold"
         >
-          <Link to="/home" className='block w-full h-full flex items-center justify-center'>
+          <Link to="/home" className=' w-[309px] h-full flex items-center justify-center'>
             Continue
           </Link>
         </button>
