@@ -1,75 +1,106 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function RedeemLunch() {
-  const [accountNumber, setAccountNumber] = useState("");
-  const [bank, setBank] = useState("");
+  const navigate = useNavigate();
+  
+  // State only for fields that need to be changed
+  const [bankName, setBankName] = useState("");
+  const accountNumber = "0198945933"; // Static value, no need for state
   const [lunchCount, setLunchCount] = useState("");
-  const [isOpen, setIsOpen] = useState(true); // Controls visibility
 
-  if (!isOpen) return null; // If closed, don't render the component
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!bankName || !lunchCount || parseInt(lunchCount) <= 0) {
+      alert("Please fill in all fields correctly.");
+      return;
+    }
+
+    navigate("/confirmation"); // Navigate to confirmation page
+  };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      <div className="w-full max-w-[342px] h-[520px] bg-white shadow-lg rounded-lg p-6 relative">
-        {/* Exit Button */}
+    <div className="min-h-screen bg-white p-4 flex flex-col items-center relative">
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-white bg-opacity-50"></div>
+
+      {/* Profile Section */}
+      <div className="relative h-[220px] w-full max-w-sm bg-gray-200 bg-opacity-10 p-6 text-center z-10">
+        <div className="flex items-center space-x-4">
+          <img
+            src="/images/Frame 80.png" 
+            alt="Profile"
+            className="w-[62.52px] h-[62.52px] rounded-full  border-pink-200 border-4"
+          />
+          <div>
+            <h3 className="text-[15px] font-semibold text-[#710193]">Rebecca Adeyoju</h3>
+            <p className="text-[#AD99B2] text-[10px]">Lab Analyst.</p>
+          </div>
+          <button className="ml-auto text-white w-[31px] h-[19.5px]">⚙</button>
+        </div>
+        <div className="flex space-x-3 tracking-tighter mt-4">
+          <div className="w-[115px] h-[68px]">
+            <h4 className="text-[14px] font-semibold text-[#87748C]">87</h4>
+            <p className="text-[14px] font-semibold text-[#87748C]">Total free lunches received</p>
+          </div>
+          <div className="w-[115px] h-[68px]">
+            <h4 className="text-[14px] font-semibold text-[#87748C]">34</h4>
+            <p className="text-[14px] font-semibold text-[#87748C]">Total free lunches given</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Redeem Lunch Modal */}
+      <div className="relative w-full max-w-[390px] h-[543px] bg-[#FFFCFD] shadow-lg rounded-lg p-6  z-20">
         <button
-          onClick={() => setIsOpen(false)}
-          className="absolute top-3 right-3 text-[#87748C] w-[20px] h-[20px]"
+          onClick={() => navigate("/home")}
+          className="absolute top-4 right-4 text-[#87748C] h-[18px] w-[18px]"
         >
-          &times;
+          ✖
         </button>
 
-        <h2 className="text-[24px] font-semibold text-[#710193] mb-4 ">Redeem Lunch</h2>
+        <h2 className="text-[24px] font-semibold text-[#710193]">Redeem Lunch</h2>
 
-        {/* Bank Name Dropdown */}
-        <label className="block text-[14px] font-medium text-[#87748C] mb-1">Enter Bank Name</label>
-        <select
-          value={bank}
-          onChange={(e) => setBank(e.target.value)}
-          className="w-full p-2 border rounded-[10px] h-[56px] mb-3 focus:ring focus:ring-purple-200"
-        >
-          <option value="">Select Bank</option>
-          <option value="bank1">Bank 1</option>
-          <option value="bank2">Bank 2</option>
-        </select>
+        <form onSubmit={handleSubmit} className="mt-4">
+          <label className="block text-left text-[14px] text-[#87748C]">Enter Bank Name</label>
+          <select
+            value={bankName}
+            onChange={(e) => setBankName(e.target.value)}
+            className="w-full h-[56px] mt-1 p-2 border rounded"
+          >
+            <option value="">Select Bank</option>
+            <option value="GTBank">GTBank</option>
+            <option value="Zenith Bank">Zenith Bank</option>
+            <option value="First Bank">First Bank</option>
+          </select>
 
-        {/* Account Number Input */}
-        <label className="block text-[14px] font-medium text-[#87748C] mb-1">Enter Account Number</label>
-        <input
-          type="text"
-          placeholder="12345678"
-          value={accountNumber}
-          onChange={(e) => setAccountNumber(e.target.value)}
-          className="w-full p-2 border rounded-[10px] h-[56px] mb-3 focus:ring focus:ring-purple-200"
-        />
+          <label className="block text-left text-[14px] text-[#87748C] mt-3">Enter Account Number</label>
+          <input
+            type="text"
+            value={accountNumber}
+            readOnly
+            className="w-full h-[56px] mt-1 p-2 border rounded bg-gray-100"
+          />
 
-        {/* Fixed Name Display */}
-        <div className="flex items-center justify-between  px-3 py-2 rounded-md text-[#110216] mb-2">
-          Rebecca Adeyoju
-          <input type="checkbox" checked readOnly className="h-4 w-4 text-purple-600" />
-        </div>
+          <label className="block text-left text-[14px] text-[#87748C] mt-3">Enter the number of lunch to redeem</label>
+          <input
+            type="number"
+            value={lunchCount}
+            onChange={(e) => setLunchCount(e.target.value)}
+            className="w-full h-[56px] mt-1 p-2 border rounded"
+            placeholder="1"
+          />
 
-        {/* Number of Lunches Input */}
-        <label className="block text-[14px] font-medium text-[#403f41] mb-1">
-          Enter the number of lunch to redeem
-        </label>
-        <input
-          type="number"
-          placeholder="Enter amount"
-          value={lunchCount}
-          onChange={(e) => setLunchCount(e.target.value)}
-          className="w-full p-2 border rounded-[10px] h-[56px] mb-3 focus:ring focus:ring-purple-200"
-        />
+          <p className="w-[120px] p-[2px] rounded-[10px] text-[10px] bg-[#FFF2C2] text-[#FFA500] mt-3">1 lunch gives you ₦4200</p>
 
-        {/* Lunch Conversion Info */}
-        <div className="text-[10px] w-[150px]  bg-yellow-100 text-[#FFA500] w- py-2 px-3 rounded-md mb-3">
-          1 lunch gives you <span className="font-semibold">₦4200</span>
-        </div>
-
-        {/* Withdraw Button */}
-        <button className="w-full bg-[#7C149B] h-[56px] text-white py-2 rounded-md hover:bg-purple-800 transition">
-          Withdraw
-        </button>
+          <button
+            type="submit"
+            className="mt-4 bg-[#7C149B] text-white py-2 px-6 rounded-md w-full h-[56px]"
+          >
+            Withdraw
+          </button>
+        </form>
       </div>
     </div>
   );
