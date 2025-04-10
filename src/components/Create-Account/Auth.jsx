@@ -47,7 +47,7 @@ export default function Auth() {
                     <button className='bg-white text-[#7C149B] hover:cursor-pointer w-full h-[56px] rounded-[10px] text-[16px] font-semibold ' onClick={clickDisplay}>Create Account</button>
 
                     {/* Types of Account to create */}
-                    <div className={`grid grid-cols-2 gap-3 mt-2 ${display}  transition-opacity duration-300 ${displayed ? 'opacity-100' : 'opacity-15'
+                    <div className={`scale-in-tr  grid grid-cols-2 gap-3 mt-2 ${display}  transition-opacity duration-300 ${displayed ? 'opacity-100' : 'opacity-15'
                         } `}>
 
                         {/* Organization Button */}
